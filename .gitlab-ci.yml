@@ -2,11 +2,11 @@ stages:
   - test
   - build
   
-
-
 test:
   image: node:latest
   stage: test
+   script:
+    - echo "This job tests something"
   script:
     # install dependencies
     - npm ci
