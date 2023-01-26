@@ -1,0 +1,139 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-01-26T16:07:38.062Z",
+    "end": "2023-01-26T16:09:25.486Z",
+    "duration": 107424,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7981bd7c-7376-43ed-8843-1d01017b71e8",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\DSWebshopForgotPasswword.specs.js",
+      "file": "cypress\\TestArcanetinmen\\DSWebshopForgotPasswword.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6a063317-f664-43d2-a522-937a7494309c",
+          "title": "forget password",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Forgot password screen",
+              "fullTitle": "forget password Forgot password screen",
+              "timedOut": null,
+              "duration": 105126,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "forpwd.entermail().type(emaildata.email);\nforpwd.clickButton().click();\ncy.wait(100000);",
+              "err": {},
+              "uuid": "c7c75154-0f25-44ba-8157-96209cced6e7",
+              "parentUUID": "6a063317-f664-43d2-a522-937a7494309c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Gets Password Reset email from Mailosaur",
+              "fullTitle": "forget password Gets Password Reset email from Mailosaur",
+              "timedOut": null,
+              "duration": 2087,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"\\\\DSWebshopForgotPasswword.specs.js\\\\forget password -- Gets Password Reset email from Mailosaur (failed).png\"\n        }\n      ]\n    ]\n  },\n  \"assets/DSWebshopForgotPasswword.specs.js/forget password --       Gets Password Reset email from Mailosaur (failed).png\"\n]",
+              "code": "const serverId = 'qarraeah';\nconsole.log(emaildata.email);\ncy.mailosaurGetMessage(serverId, {\n  sentTo: emaildata.email\n}).then(email => {\n  console.log(email);\n  expect(email.subject).to.have.string('Reset your password');\n  var passwordResetLink = email.text.links[0].href;\n  console.log(passwordResetLink);\n  cy.visit(passwordResetLink, {\n    force: true\n  });\n});\nconst validPassword = _faker.faker.internet.password();\nconsole.log(validPassword);\ncy.contains('Reset your password').should('be.visible');\nforpwd.enterpassword().type(validPassword);\nforpwd.enterconfirmpassword().type(validPassword);\nforpwd.clickButton().click();\ncy.log(cy.url());\ncy.contains(\"Reset confirmed!\").should('be.visible');\ncy.get('.btn').click(); //   cy.visit(\"https://auth.dragonshield.com/Account/Login\");\nforpwd.entermail().type(emaildata.email);\nforpwd.enterpassword.type(validPassword);\nforpwd.clickButton().click();",
+              "err": {
+                "message": "TypeError: forpwd.enterpassword.type is not a function",
+                "estack": "TypeError: forpwd.enterpassword.type is not a function\n    at Context.eval (webpack:///./cypress/TestArcanetinmen/DSWebshopForgotPasswword.specs.js:45:33)",
+                "diff": null
+              },
+              "uuid": "f442de87-a044-4e78-b5fa-fd190dca332b",
+              "parentUUID": "6a063317-f664-43d2-a522-937a7494309c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c7c75154-0f25-44ba-8157-96209cced6e7"
+          ],
+          "failures": [
+            "f442de87-a044-4e78-b5fa-fd190dca332b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 107213,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporteroptions": {
+          "charts": "true",
+          "reportDir": "cypress/reports/mochawesome-report",
+          "reportFilename": "report",
+          "overwrite": false,
+          "html": true,
+          "json": true,
+          "quiet": true
+        },
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

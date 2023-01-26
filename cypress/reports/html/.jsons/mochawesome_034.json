@@ -1,0 +1,115 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-01-26T16:30:15.610Z",
+    "end": "2023-01-26T16:31:04.685Z",
+    "duration": 49075,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d2fd382b-8ef6-4b77-8f4a-b167c556591b",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\TestAllLinks.specs.js",
+      "file": "cypress\\TestArcanetinmen\\TestAllLinks.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f3ac00d3-8adc-45aa-80eb-fce4dc0ebaed",
+          "title": "AT Brandsite Automation Suite I",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "AT Brandsite Sanity I Footer links",
+              "fullTitle": "AT Brandsite Automation Suite I AT Brandsite Sanity I Footer links",
+              "timedOut": null,
+              "duration": 35609,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const pages = ['Contact', 'Dragon Shield', 'BOARD GAME SLEEVES', 'BECKETT SHIELD', 'Distributors login'];\npages.forEach(page => {\n  cy.get('footer').scrollIntoView().contains;\n  cy.get('footer').contains(page).click({\n    force: true\n  }), cy.window().then(win => win.location.href = \"/\");\n  console.log(cy.title());\n});",
+              "err": {},
+              "uuid": "09a00b1b-e9d9-4667-a459-112580cc73af",
+              "parentUUID": "f3ac00d3-8adc-45aa-80eb-fce4dc0ebaed",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "09a00b1b-e9d9-4667-a459-112580cc73af"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35609,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporteroptions": {
+          "charts": "true",
+          "reportDir": "cypress/reports/mochawesome-report",
+          "reportFilename": "report",
+          "overwrite": false,
+          "html": true,
+          "json": true,
+          "quiet": true
+        },
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

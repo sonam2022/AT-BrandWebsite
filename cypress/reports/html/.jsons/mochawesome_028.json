@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-01-26T16:22:29.103Z",
+    "end": "2023-01-26T16:22:41.428Z",
+    "duration": 12325,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d281d483-1a2b-4398-9054-b7dd3ed60a0e",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\DSWebshopSearch.specs.js",
+      "file": "cypress\\TestArcanetinmen\\DSWebshopSearch.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "97dd0149-7a55-4d98-8ae6-0e249d6c1888",
+          "title": "DSWebshopSearch",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "DS Webshop Search Feature",
+              "fullTitle": "DSWebshopSearch DS Webshop Search Feature",
+              "timedOut": null,
+              "duration": 12234,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"\\\\DSWebshopSearch.specs.js\\\\DSWebshopSearch -- DS Webshop Search Feature (failed).png\"\n        }\n      ]\n    ]\n  },\n  \"assets/DSWebshopSearch.specs.js/DSWebshopSearch --       DS Webshop Search Feature (failed).png\"\n]",
+              "code": "cy.get('#leo_search_block_top').click();\ncy.get('[name=\"search_query\"]').type('Matte').wait(5000);\ncy.get('div>ul>li').children('.lps-result-content').eq(3).click();",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4000ms: `cy.type()` failed because this element is not visible:\n\n`<input class=\"search_query form-control grey ac_input\" type=\"text\" id=\"leo_search_query_top\" name=\"search_query\" value=\"\" placeholder=\"Search\" autocomplete=\"off\">`\n\nThis element `<input#leo_search_query_top.search_query.form-control.grey.ac_input>` is not visible because its parent `<div.leoproductsearch-result>` has CSS property: `visibility: hidden`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4000ms: `cy.type()` failed because this element is not visible:\n\n`<input class=\"search_query form-control grey ac_input\" type=\"text\" id=\"leo_search_query_top\" name=\"search_query\" value=\"\" placeholder=\"Search\" autocomplete=\"off\">`\n\nThis element `<input#leo_search_query_top.search_query.form-control.grey.ac_input>` is not visible because its parent `<div.leoproductsearch-result>` has CSS property: `visibility: hidden`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at runVisibilityCheck (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:147591:76)\n    at $Cy.ensureStrictVisibility (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:147607:12)\n    at runAllChecks (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:133491:14)\n    at retryActionability (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:133546:16)\n    at tryCatcher (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise.attempt.Promise.try (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:8592:29)\n    at whenStable (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:152819:65)\n    at <unknown> (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:152244:14)\n    at tryCatcher (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:9435:18)\n    at Promise._fulfill (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:9379:18)\n    at <unknown> (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:10993:46)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/TestArcanetinmen/DSWebshopSearch.specs.js:14:40)",
+                "diff": null
+              },
+              "uuid": "75bb53f7-83d7-446e-ac94-6b574f0ab7b5",
+              "parentUUID": "97dd0149-7a55-4d98-8ae6-0e249d6c1888",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "75bb53f7-83d7-446e-ac94-6b574f0ab7b5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 12234,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporteroptions": {
+          "charts": "true",
+          "reportDir": "cypress/reports/mochawesome-report",
+          "reportFilename": "report",
+          "overwrite": false,
+          "html": true,
+          "json": true,
+          "quiet": true
+        },
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

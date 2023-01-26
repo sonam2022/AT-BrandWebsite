@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-01-26T16:15:38.647Z",
+    "end": "2023-01-26T16:18:08.362Z",
+    "duration": 149715,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1fe64106-11e9-444c-ada6-6b90105c238d",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\DSWebshopMyAccountOrderdetails.specs.js",
+      "file": "cypress\\TestArcanetinmen\\DSWebshopMyAccountOrderdetails.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e9232a57-447c-411f-a06b-1d4456ef847b",
+          "title": "Navigate to My Account_Order Details",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Order details and History Management",
+              "fullTitle": "Navigate to My Account_Order Details Order details and History Management",
+              "timedOut": null,
+              "duration": 149404,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"\\\\DSWebshopMyAccountOrderdetails.specs.js\\\\Navigate to My Account_Order Details -- Order details and History Management (failed).png\"\n        }\n      ]\n    ]\n  },\n  \"assets/DSWebshopMyAccountOrderdetails.specs.js/Navigate to My Account_Order Details --       Order details and History Management (failed).png\"\n]",
+              "code": "cy.get('span[class=\"link-item\"]').contains('Order history and details').click();\ncy.get('tbody').each(($el, index, $list) => {\n  // grabbing all text from second column\n  const txt = $el.text();\n  console.log(txt); // checking the matching condition\n  if (txt.includes('Sleeve Crafter')) {\n    // capturing the next sibling with the help of next() method\n    for (var i = 1; i <= 10; i++) {\n      console.log(i);\n      const product = `tbody > :nth-child(${i}) > :nth-child(${i})`;\n      cy.get(product).eq(index).next().then(function (desc) {\n        // capturing the text of next sibling\n        const rsl = desc.text();\n        console.log(rsl); //assertion to verify the text\n        cy.contains(\"Details\").each(el => {\n          cy.wrap(el).click();\n          console.log(cy.url());\n          cy.go('back');\n        });\n      });\n    }\n  }\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: ``, but never found it. Queried from element: <td.text-sm-center.order-actions>",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: ``, but never found it. Queried from element: <td.text-sm-center.order-actions>\n    at Context.eval (webpack:///./cypress/TestArcanetinmen/DSWebshopMyAccountOrderdetails.specs.js:32:29)",
+                "diff": null
+              },
+              "uuid": "d28b0dca-64bd-41bb-ab3b-ecf597f9406f",
+              "parentUUID": "e9232a57-447c-411f-a06b-1d4456ef847b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d28b0dca-64bd-41bb-ab3b-ecf597f9406f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 149404,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporteroptions": {
+          "charts": "true",
+          "reportDir": "cypress/reports/mochawesome-report",
+          "reportFilename": "report",
+          "overwrite": false,
+          "html": true,
+          "json": true,
+          "quiet": true
+        },
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

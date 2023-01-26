@@ -1,0 +1,139 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 1,
+    "failures": 0,
+    "start": "2023-01-26T16:05:25.715Z",
+    "end": "2023-01-26T16:06:17.932Z",
+    "duration": 52217,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 50,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "b7c47602-343f-4cfc-83e2-e15734d65f3f",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\DSWebShopQuickViewAddToCart.specs.js",
+      "file": "cypress\\TestArcanetinmen\\DSWebShopQuickViewAddToCart.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "37df04f9-8191-40c4-8f51-7af882564a2d",
+          "title": "Quick View Pop Up",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "QuickView without login",
+              "fullTitle": "Quick View Pop Up QuickView without login",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.leo-top-menu > .nav > .nav-item').contains('Solid Color Sleeves').trigger('onmouseover', {\n  force: true\n}).invoke('show'); // cy.get('a[class=\"category-sub-link\"]').should('be.visible');\ncy.get('.dropdown-menu').children().contains('Standard Size').trigger('onmouseover', {\n  force: true\n}).invoke('show');\ncy.get('.dropdown-menu').children().contains('Classic 100').click({\n  force: true\n});\nfor (var i = 0; i <= 4; i++) {\n  wishlist.addtowishlist().eq(i).trigger('onmouseover').invoke('show').find('.quick-view').click({\n    force: true\n  }).wait(3000);\n  cy.get('.modal-content').should('be.visible');\n  cy.get('.btn.btn-primary.add-to-cart').eq(0).click({\n    force: true\n  }); //cy.get('.modal-content').should('be.visible');\n  cy.get('#blockcart-modal > .modal-dialog > .modal-content > .modal-header > .close').click({\n    force: true\n  }).wait(2000);\n}",
+              "err": {},
+              "uuid": "fbc8b81a-0f4a-42a9-9f46-b47becb9dc0f",
+              "parentUUID": "37df04f9-8191-40c4-8f51-7af882564a2d",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "QuickView with login",
+              "fullTitle": "Quick View Pop Up QuickView with login",
+              "timedOut": null,
+              "duration": 51938,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"\\\\DSWebShopQuickViewAddToCart.specs.js\\\\Quick View Pop Up -- QuickView with login (failed).png\"\n        }\n      ]\n    ]\n  },\n  \"assets/DSWebShopQuickViewAddToCart.specs.js/Quick View Pop Up --       QuickView with login (failed).png\"\n]",
+              "code": "cy.get('.ti-user').click();\ncy.contains('Sign in/Register').click({\n  force: true\n});\ncy.wait(10000);\ncy.get('#Email').type('sonamk1@beckett.com');\ncy.get('#Password').type('Test@1234');\ncy.get('.btn').click();\ncy.get('.leo-top-menu > .nav > .nav-item').contains('Solid Color Sleeves').trigger('onmouseover', {\n  force: true\n}).invoke('show'); // cy.get('a[class=\"category-sub-link\"]').should('be.visible');\ncy.get('.dropdown-menu').children().contains('Standard Size').trigger('onmouseover', {\n  force: true\n}).invoke('show');\ncy.get('.dropdown-menu').children().contains('Classic 100').click({\n  force: true\n});\nfor (var i = 0; i <= 4; i++) {\n  wishlist.addtowishlist().eq(i).trigger('onmouseover', {\n    force: true\n  }).invoke('show').find('.quick-view').click({\n    force: true\n  }).wait(3000);\n  cy.get('.modal-content').should('be.visible');\n  if (cy.contains('There are not enough quantities in stock').should('be.visible')) {\n    cy.get('.modal-content > .modal-header > .close').last().click({\n      force: true\n    }).wait(2000);\n  } else {\n    cy.get('.btn.btn-primary.add-to-cart').click({\n      force: true\n    });\n    wishlist.addtowishlist().eq(i).trigger('onmouseover').invoke('show').find('.quick-view').click({\n      force: true\n    }).wait(3000);\n  }\n}",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'There are not enough quantities in stock' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'There are not enough quantities in stock' but never did.\n    at Context.eval (webpack:///./cypress/TestArcanetinmen/DSWebShopQuickViewAddToCart.specs.js:52:59)",
+                "diff": null
+              },
+              "uuid": "829a3f16-214a-4ebf-a3a3-00c758f29b6e",
+              "parentUUID": "37df04f9-8191-40c4-8f51-7af882564a2d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "829a3f16-214a-4ebf-a3a3-00c758f29b6e"
+          ],
+          "pending": [],
+          "skipped": [
+            "fbc8b81a-0f4a-42a9-9f46-b47becb9dc0f"
+          ],
+          "duration": 51938,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporteroptions": {
+          "charts": "true",
+          "reportDir": "cypress/reports/mochawesome-report",
+          "reportFilename": "report",
+          "overwrite": false,
+          "html": true,
+          "json": true,
+          "quiet": true
+        },
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

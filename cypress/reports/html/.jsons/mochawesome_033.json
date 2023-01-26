@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-01-26T16:29:53.916Z",
+    "end": "2023-01-26T16:30:02.251Z",
+    "duration": 8335,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f662cf42-9465-4644-a43d-62e6e8ce469a",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\TestATWebsite.specs.js",
+      "file": "cypress\\TestArcanetinmen\\TestATWebsite.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "da62ca1c-4242-4119-81a8-19deb3521bf0",
+          "title": "AT Brandsite Automation Suite II",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "AT Brandsite Sanity II Menu Links",
+              "fullTitle": "AT Brandsite Automation Suite II AT Brandsite Sanity II Menu Links",
+              "timedOut": null,
+              "duration": 7898,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"\\\\TestATWebsite.specs.js\\\\AT Brandsite Automation Suite II -- AT Brandsite Sanity II Menu Links -- before all hook (failed).png\"\n        }\n      ]\n    ]\n  },\n  \"assets/TestATWebsite.specs.js/AT Brandsite Automation Suite II --       AT Brandsite Sanity II Menu Links (failed).png\"\n]",
+              "code": "const path = 'https://www.arcanetinmen.com';\ncy.get('ul[id=\"menu-header\"]>li').each(el => {\n  cy.url().then($url => {\n    if ($url.includes(path)) {\n      cy.wrap(el).click();\n      console.log(cy.url());\n    } else {\n      cy.go(\"back\");\n      cy.break;\n    }\n  });\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://www.dragonshield.com/' to include 'arcanetinmen'\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `AT Brandsite Automation Sui...`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://www.dragonshield.com/' to include 'arcanetinmen'\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `AT Brandsite Automation Sui...`\n    at Context.eval (webpack:///./cypress/TestArcanetinmen/TestATWebsite.specs.js:8:16)",
+                "diff": null
+              },
+              "uuid": "56f8c884-d800-4348-8a9c-3a44d4501226",
+              "parentUUID": "da62ca1c-4242-4119-81a8-19deb3521bf0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "56f8c884-d800-4348-8a9c-3a44d4501226"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7898,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporteroptions": {
+          "charts": "true",
+          "reportDir": "cypress/reports/mochawesome-report",
+          "reportFilename": "report",
+          "overwrite": false,
+          "html": true,
+          "json": true,
+          "quiet": true
+        },
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

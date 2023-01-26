@@ -9,9 +9,21 @@
 // ***********************************************
 //
 //
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
+// -- This is a login custom  command --
+ Cypress.Commands.add('DragonShieldLogin', (email, password) => {
+
+    cy.get('#Email').type(email);
+    cy.get('#Password').type(password,{});
+     cy.get('.btn').click();
+
+ })
+
+ Cypress.Commands.add("launchwebsite",(url)=>{
+cy.visit(url);
+cy.url().should('include','dragonshield');
+cy.xpath("/html/body/div[1]/div/div[4]/div[1]/div[2]/button[4]").click();
+cy.log('Page loaded successfully');
+})
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
@@ -22,4 +34,17 @@
 //
 //
 // -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.overwrite('type', (originalFn, element, text, options) => {
+    if (options && options.sensitive) {
+      // turn off original log
+      options.log = false
+      // create our own log with masked message
+      Cypress.log({
+        $el: element,
+        name: 'type',
+        message: '*'.repeat(text.length),
+      })
+    }
+  
+    return originalFn(element, text, options)
+  })

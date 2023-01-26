@@ -1,0 +1,139 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-01-26T16:23:56.970Z",
+    "end": "2023-01-26T16:25:28.717Z",
+    "duration": 91747,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c65914e1-5808-4c34-a823-61b479a38242",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\DSWebshopUserRegistration.specs.js",
+      "file": "cypress\\TestArcanetinmen\\DSWebshopUserRegistration.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5ff2e240-a2bd-4629-bcd6-804ef7f97751",
+          "title": "User registration",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Register successfully done",
+              "fullTitle": "User registration Register successfully done",
+              "timedOut": null,
+              "duration": 70543,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/webshop');\ncy.xpath(\"/html/body/div[1]/div/div[4]/div[1]/div[2]/button[4]\").click();\nuserreg.hoverusericon().trigger('mouseover', {\n  force: true\n});\nuserreg.clicksigninregister().click({\n  force: true\n});\nuserreg.register().click();\nuserreg.newemail().type(emailRandom);\nuserreg.newfname().type(nameRandomf);\nuserreg.newlname().type(nameRandoml);\nuserreg.pwd().type(randomPass);\nuserreg.cpwd().type(randomPass);\ncy.log(randomPass);\nuserreg.tnc().check({\n  force: true\n});\nuserreg.AcceptTC().check({\n  force: true\n});\nuserreg.submitnuser().click();\nuserreg.usersuccess().should(\"be.visible\");\ncy.wait(50000);",
+              "err": {},
+              "uuid": "b468684a-3b28-4559-9ad6-96425dfa12fd",
+              "parentUUID": "5ff2e240-a2bd-4629-bcd6-804ef7f97751",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Account Activation Email",
+              "fullTitle": "User registration Account Activation Email",
+              "timedOut": null,
+              "duration": 20897,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"\\\\DSWebshopUserRegistration.specs.js\\\\User registration -- Account Activation Email (failed).png\"\n        }\n      ]\n    ]\n  },\n  \"assets/DSWebshopUserRegistration.specs.js/User registration --       Account Activation Email (failed).png\"\n]",
+              "code": "const serverId = 'qarraeah';\nconsole.log(emailRandom);\ncy.mailosaurSearchMessages(serverId, {\n  sentTo: emailRandom\n}).then(email => {\n  console.log(email.items[0]);\n  expect(email.items[0].from[0].email).to.have.string(\"@dragonshield.com\");\n  expect(email.items[0].from[0].email).to.have.string(\"info\");\n  expect(email.items[0].to[0].email).to.have.string(emailRandom.toLowerCase());\n  expect(email.items[0].subject).to.have.string('Activate your account');\n  console.log(\"Test Pass\");\n  cy.mailosaurGetMessageById(email.items[0].id).then(emailbody => {\n    console.log(emailbody);\n    var accountactlink = emailbody.html.links[0].href;\n    console.log(accountactlink);\n    cy.visit(accountactlink);\n  });\n  userreg.usersuccess1().should('be.visible');\n  cy.contains('EU Webshop').click();\n});",
+              "err": {
+                "message": "CypressError: `cy.wrap()` timed out waiting `20000ms` to complete.\n\nYou called `cy.wrap()` with a promise that never resolved.\n\nTo increase the timeout, use `{ timeout: number }`\n\nhttps://on.cypress.io/wrap",
+                "estack": "CypressError: `cy.wrap()` timed out waiting `20000ms` to complete.\n\nYou called `cy.wrap()` with a promise that never resolved.\n\nTo increase the timeout, use `{ timeout: number }`\n\nhttps://on.cypress.io/wrap\n    at <unknown> (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:141107:78)\n    at tryCatcher (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:11318:23)\n    at <unknown> (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:6440:41)\n    at tryCatcher (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at MailosaurCommands.mailosaurSearchMessages (webpack:///./node_modules/cypress-mailosaur/src/mailosaurCommands.js:178:0)",
+                "diff": null
+              },
+              "uuid": "e635301d-3d17-4e57-bb76-8dd82b78a655",
+              "parentUUID": "5ff2e240-a2bd-4629-bcd6-804ef7f97751",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b468684a-3b28-4559-9ad6-96425dfa12fd"
+          ],
+          "failures": [
+            "e635301d-3d17-4e57-bb76-8dd82b78a655"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 91440,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporteroptions": {
+          "charts": "true",
+          "reportDir": "cypress/reports/mochawesome-report",
+          "reportFilename": "report",
+          "overwrite": false,
+          "html": true,
+          "json": true,
+          "quiet": true
+        },
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -18,6 +18,7 @@ module.exports = defineConfig({
    viewportHeight: 768,
    chromeWebSecurity: false,
    screenshotOnRunFailure:true,
+   projectId: "x76mqo",
    screenshotsFolder:'mochawesome-report/assests',
    "reporter": "cypress-mochawesome-reporter",
    "reporterOptions": {

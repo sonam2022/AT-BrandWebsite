@@ -1,0 +1,277 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 8,
+    "passes": 1,
+    "pending": 0,
+    "failures": 7,
+    "start": "2023-01-26T16:10:10.717Z",
+    "end": "2023-01-26T16:14:44.035Z",
+    "duration": 273318,
+    "testsRegistered": 8,
+    "passPercent": 12.5,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "54caa3d5-90ad-4f95-ab81-2e86df47b7ff",
+      "title": "",
+      "fullFile": "cypress\\TestArcanetinmen\\DSWebshopMenuforloop.specs.js",
+      "file": "cypress\\TestArcanetinmen\\DSWebshopMenuforloop.specs.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "043bc291-6fd0-432b-8ddd-a99f26ac1fc1",
+          "title": "Visit Each menu and submenu",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visit Menu of web shop for Solid Color Sleeves>Standard Size",
+              "fullTitle": "Visit Each menu and submenu Visit Menu of web shop for Solid Color Sleeves>Standard Size",
+              "timedOut": null,
+              "duration": 10486,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"\\\\DSWebshopMenuforloop.specs.js\\\\Visit Each menu and submenu -- Visit Menu of web shop for Solid Color SleevesStandard Size (failed).png\"\n        }\n      ]\n    ]\n  },\n  \"assets/DSWebshopMenuforloop.specs.js/Visit Each menu and submenu --       Visit Menu of web shop for Solid Color Sleeves>Standard Size (failed).png\"\n]",
+              "code": "const pages = ['Matte Dual 100', 'Matte 100', 'Perfect Fit', 'Matte Non-Glare 100', 'Classic 100'];\nfor (var i = 0; i <= pages.length; i++) {\n  menuhomepage.hoverOnSolidColorsleeves();\n  menuhomepage.hoverOnSolidColorsleevesStandardSize();\n  menuhomepage.clickOnSubMenu().contains(pages[i]).click({\n    force: true\n  });\n  cy.window().then(win => win.location.href = \"/webshop\");\n}",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Matte Dual 100' within the element: [ <a.cate-item.active>, 69 more... ] but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Matte Dual 100' within the element: [ <a.cate-item.active>, 69 more... ] but never did.\n    at Context.eval (webpack:///./cypress/TestArcanetinmen/DSWebshopMenuforloop.specs.js:21:30)",
+                "diff": null
+              },
+              "uuid": "34d5f248-9e77-496c-a3b7-c17ce8161add",
+              "parentUUID": "043bc291-6fd0-432b-8ddd-a99f26ac1fc1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visit Menu of web shop for Solid Color Sleeves>Japanese Size",
+              "fullTitle": "Visit Each menu and submenu Visit Menu of web shop for Solid Color Sleeves>Japanese Size",
+              "timedOut": null,
+              "duration": 32792,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"\\\\DSWebshopMenuforloop.specs.js\\\\Visit Each menu and submenu -- Visit Menu of web shop for Solid Color SleevesJapanese Size (failed).png\"\n        }\n      ]\n    ]\n  },\n  \"assets/DSWebshopMenuforloop.specs.js/Visit Each menu and submenu --       Visit Menu of web shop for Solid Color Sleeves>Japanese Size (failed).png\"\n]",
+              "code": "const japanpages = ['Classic 60', 'Matte 60', 'Perfect Fit', 'Matte Dual 60'];\nfor (var i = 0; i <= japanpages.length; i++) {\n  menuhomepage.hoverOnSolidColorsleeves();\n  menuhomepage.hoverOnSolidColorsleevesJapaneseSize();\n  menuhomepage.clickOnchildSubMenu().contains(japanpages[i]).click({\n    force: true\n  });\n  cy.window().then(win => win.location.href = \"/webshop\");\n}",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Matte Dual 60' within the element: [ <ul.level0>, 17 more... ] but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Matte Dual 60' within the element: [ <ul.level0>, 17 more... ] but never did.\n    at Context.eval (webpack:///./cypress/TestArcanetinmen/DSWebshopMenuforloop.specs.js:36:35)",
+                "diff": null
+              },
+              "uuid": "c9a6c1a5-bc54-471b-8e6c-3f78f05469c4",
+              "parentUUID": "043bc291-6fd0-432b-8ddd-a99f26ac1fc1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visit Menu of web shop for Art Sleeves>Standard Size",
+              "fullTitle": "Visit Each menu and submenu Visit Menu of web shop for Art Sleeves>Standard Size",
+              "timedOut": null,
+              "duration": 19215,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"\\\\DSWebshopMenuforloop.specs.js\\\\Visit Each menu and submenu -- Visit Menu of web shop for Art SleevesStandard Size (failed).png\"\n        }\n      ]\n    ]\n  },\n  \"assets/DSWebshopMenuforloop.specs.js/Visit Each menu and submenu --       Visit Menu of web shop for Art Sleeves>Standard Size (failed).png\"\n]",
+              "code": "const artsleeves = ['Standard Size', 'Japanese Size'];\nfor (var i = 0; i <= artsleeves.length; i++) {\n  menuhomepage.hoverOnArtsleeves();\n  menuhomepage.clickOnSubMenu().contains(artsleeves[i]).click({\n    force: true\n  });\n  cy.window().then(win => win.location.href = \"/webshop\");\n}",
+              "err": {
+                "message": "CypressError: `cy.contains()` can only accept a string, number or regular expression.\n\nhttps://on.cypress.io/contains",
+                "estack": "CypressError: `cy.contains()` can only accept a string, number or regular expression.\n\nhttps://on.cypress.io/contains\n    at Context.contains (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:143411:78)\n    at wrapped (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:157508:19)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/TestArcanetinmen/DSWebshopMenuforloop.specs.js:47:34)",
+                "diff": null
+              },
+              "uuid": "9dcc587e-5bb8-4d02-b425-dbaa1e219c2e",
+              "parentUUID": "043bc291-6fd0-432b-8ddd-a99f26ac1fc1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visit Menu of web shop for Roleplaying",
+              "fullTitle": "Visit Each menu and submenu Visit Menu of web shop for Roleplaying",
+              "timedOut": null,
+              "duration": 3707,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "menuhomepage.clickOnRoleplaying();",
+              "err": {},
+              "uuid": "cbbde8fb-44fd-494f-a82f-7785faf6a9c0",
+              "parentUUID": "043bc291-6fd0-432b-8ddd-a99f26ac1fc1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visit Menu of web shop for Other Gaming Accessories>Albums",
+              "fullTitle": "Visit Each menu and submenu Visit Menu of web shop for Other Gaming Accessories>Albums",
+              "timedOut": null,
+              "duration": 45570,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"\\\\DSWebshopMenuforloop.specs.js\\\\Visit Each menu and submenu -- Visit Menu of web shop for Other Gaming AccessoriesAlbums (failed).png\"\n        }\n      ]\n    ]\n  },\n  \"assets/DSWebshopMenuforloop.specs.js/Visit Each menu and submenu --       Visit Menu of web shop for Other Gaming Accessories>Albums (failed).png\"\n]",
+              "code": "const albumpages = ['Portfolio', 'Binder Pages', 'Zipster Binder', 'Slipcase Binder'];\nfor (var i = 0; i <= albumpages.length; i++) {\n  menuhomepage.clickOnOtherGamingAccessories();\n  menuhomepage.clickOnSubMenu().children().contains('Albums').trigger('mouseover', {\n    force: true\n  }).invoke('show');\n  menuhomepage.clickOnchildSubMenu().contains(albumpages[i]).click({\n    force: true\n  });\n  cy.window().then(win => win.location.href = \"/webshop\");\n}",
+              "err": {
+                "message": "CypressError: `cy.contains()` can only accept a string, number or regular expression.\n\nhttps://on.cypress.io/contains",
+                "estack": "CypressError: `cy.contains()` can only accept a string, number or regular expression.\n\nhttps://on.cypress.io/contains\n    at Context.contains (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:143411:78)\n    at wrapped (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:157508:19)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/TestArcanetinmen/DSWebshopMenuforloop.specs.js:68:35)",
+                "diff": null
+              },
+              "uuid": "f5c0bb4d-66ac-46ce-b602-cd3b29f968bc",
+              "parentUUID": "043bc291-6fd0-432b-8ddd-a99f26ac1fc1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visit Menu of web shop for Other Gaming Accessories>decks",
+              "fullTitle": "Visit Each menu and submenu Visit Menu of web shop for Other Gaming Accessories>decks",
+              "timedOut": null,
+              "duration": 87773,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"\\\\DSWebshopMenuforloop.specs.js\\\\Visit Each menu and submenu -- Visit Menu of web shop for Other Gaming Accessoriesdecks (failed).png\"\n        }\n      ]\n    ]\n  },\n  \"assets/DSWebshopMenuforloop.specs.js/Visit Each menu and submenu --       Visit Menu of web shop for Other Gaming Accessories>decks (failed).png\"\n]",
+              "code": "const deckpages = ['Deck Shell', 'Magic Carpet', 'Nest', 'Nest+', 'Cube Shell', 'Strongbox', 'Double Shell'];\nfor (var i = 0; i <= deckpages.length; i++) {\n  menuhomepage.clickOnOtherGamingAccessories();\n  menuhomepage.clickOnSubMenu().children().contains('Deck Boxes').trigger('mouseover', {\n    force: true\n  }).invoke('show');\n  menuhomepage.clickOnchildSubMenu().contains(deckpages[i]).click({\n    force: true\n  });\n  cy.window().then(win => win.location.href = \"/webshop\");\n}",
+              "err": {
+                "message": "CypressError: `cy.contains()` can only accept a string, number or regular expression.\n\nhttps://on.cypress.io/contains",
+                "estack": "CypressError: `cy.contains()` can only accept a string, number or regular expression.\n\nhttps://on.cypress.io/contains\n    at Context.contains (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:143411:78)\n    at wrapped (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:157508:19)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/TestArcanetinmen/DSWebshopMenuforloop.specs.js:83:43)",
+                "diff": null
+              },
+              "uuid": "5a0cdbc2-6f94-48b1-bfb7-1e590ddede24",
+              "parentUUID": "043bc291-6fd0-432b-8ddd-a99f26ac1fc1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visit Menu of web shop for OGA Others",
+              "fullTitle": "Visit Each menu and submenu Visit Menu of web shop for OGA Others",
+              "timedOut": null,
+              "duration": 26994,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"\\\\DSWebshopMenuforloop.specs.js\\\\Visit Each menu and submenu -- Visit Menu of web shop for OGA Others (failed).png\"\n        }\n      ]\n    ]\n  },\n  \"assets/DSWebshopMenuforloop.specs.js/Visit Each menu and submenu --       Visit Menu of web shop for OGA Others (failed).png\"\n]",
+              "code": "const ogaPages = ['Playmats', 'Miscellaneous'];\nfor (var i = 0; i <= ogaPages.length; i++) {\n  menuhomepage.clickOnOtherGamingAccessories();\n  menuhomepage.clickOnSubMenu().children().contains(ogaPages[i]).click({\n    force: true\n  });\n  cy.window().then(win => win.location.href = \"/webshop\");\n}",
+              "err": {
+                "message": "CypressError: `cy.contains()` can only accept a string, number or regular expression.\n\nhttps://on.cypress.io/contains",
+                "estack": "CypressError: `cy.contains()` can only accept a string, number or regular expression.\n\nhttps://on.cypress.io/contains\n    at Context.contains (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:143411:78)\n    at wrapped (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:157508:19)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/TestArcanetinmen/DSWebshopMenuforloop.specs.js:96:49)",
+                "diff": null
+              },
+              "uuid": "f93e7180-9236-45b9-9d40-4c848549c3fe",
+              "parentUUID": "043bc291-6fd0-432b-8ddd-a99f26ac1fc1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visit Menu of web shop for Licensed Products>decks",
+              "fullTitle": "Visit Each menu and submenu Visit Menu of web shop for Licensed Products>decks",
+              "timedOut": null,
+              "duration": 45539,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        {\n          \"title\": \"Failed screenshot\",\n          \"value\": \"\\\\DSWebshopMenuforloop.specs.js\\\\Visit Each menu and submenu -- Visit Menu of web shop for Licensed Productsdecks (failed).png\"\n        }\n      ]\n    ]\n  },\n  \"assets/DSWebshopMenuforloop.specs.js/Visit Each menu and submenu --       Visit Menu of web shop for Licensed Products>decks (failed).png\"\n]",
+              "code": "const licensedPages = ['Licensed Sleeves', 'Licensed Albums', 'Licensed Playmats'];\nfor (var i = 0; i <= licensedPages.length; i++) {\n  menuhomepage.clickOnLicensedProducts();\n  menuhomepage.clickOnSubMenu().children().contains(licensedPages[i]).click({\n    force: true\n  });\n  cy.window().then(win => win.location.href = \"/webshop\");\n}",
+              "err": {
+                "message": "CypressError: `cy.contains()` can only accept a string, number or regular expression.\n\nhttps://on.cypress.io/contains",
+                "estack": "CypressError: `cy.contains()` can only accept a string, number or regular expression.\n\nhttps://on.cypress.io/contains\n    at Context.contains (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:143411:78)\n    at wrapped (https://www.dragonshield.com/__cypress/runner/cypress_runner.js:157508:19)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/TestArcanetinmen/DSWebshopMenuforloop.specs.js:109:41)",
+                "diff": null
+              },
+              "uuid": "c291c128-273f-4ccd-bee2-371ce5408005",
+              "parentUUID": "043bc291-6fd0-432b-8ddd-a99f26ac1fc1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cbbde8fb-44fd-494f-a82f-7785faf6a9c0"
+          ],
+          "failures": [
+            "34d5f248-9e77-496c-a3b7-c17ce8161add",
+            "c9a6c1a5-bc54-471b-8e6c-3f78f05469c4",
+            "9dcc587e-5bb8-4d02-b425-dbaa1e219c2e",
+            "f5c0bb4d-66ac-46ce-b602-cd3b29f968bc",
+            "5a0cdbc2-6f94-48b1-bfb7-1e590ddede24",
+            "f93e7180-9236-45b9-9d40-4c848549c3fe",
+            "c291c128-273f-4ccd-bee2-371ce5408005"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 272076,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporteroptions": {
+          "charts": "true",
+          "reportDir": "cypress/reports/mochawesome-report",
+          "reportFilename": "report",
+          "overwrite": false,
+          "html": true,
+          "json": true,
+          "quiet": true
+        },
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

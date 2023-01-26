@@ -4,16 +4,11 @@ const message =  faker.lorem.lines();
 describe('Contact Us Form',function(){
        beforeEach(() => {
         
-            cy.visit('/webshop');
-           cy.url().should('include','dragonshield');
-           cy.xpath("/html/body/div[1]/div/div[4]/div[1]/div[2]/button[4]").click();
-           cy.log('Page loaded successfully');
+         cy.launchwebsite("/webshop");
            cy.get('.ti-user').click();
            cy.contains('Sign in/Register').click({force:true});
            cy.wait(10000);
-           cy.get('#Email').type('sonamk1@beckett.com');
-           cy.get('#Password').type('Test@1234');
-           cy.get('.btn').click();
+           cy.DragonShieldLogin("sonam.kaul@arcanetinmen.com","Test@1234");
 
           })
 
