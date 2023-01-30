@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "rollup -c",
+    "start": "http server",
     "test": "npx cypress open",
     "clean:reports": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports && mkdir cypress\\reports\\mochareports",
     "pretest": "npm run clean:reports",
@@ -20,6 +22,7 @@
     "@babel/core": "^7.19.1",
     "@babel/preset-env": "^7.19.1",
     "@cypress/webpack-preprocessor": "^5.13.0",
+    "@rollup/plugin-commonjs": "^24.0.1",
     "babel-loader": "^8.2.5",
     "cypress": "^10.11.0",
     "cypress-iframe": "^1.0.1",

@@ -17,6 +17,7 @@ import {faker} from '@faker-js/faker';
 import './commands'
 
 import 'cypress-v10-preserve-cookie';
+import commonjs from '@rollup/plugin-commonjs';
 
 require('date-and-time')
 
