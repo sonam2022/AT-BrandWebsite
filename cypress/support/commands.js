@@ -24,6 +24,8 @@ cy.url().should('include','dragonshield');
 cy.xpath("/html/body/div[1]/div/div[4]/div[1]/div[2]/button[4]").click();
 cy.log('Page loaded successfully');
 })
+
+
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
