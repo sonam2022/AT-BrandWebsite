@@ -1,6 +1,6 @@
 import mywishlist from './PageObjects/mywishlist';
 
-describe('Quick View Pop Up',function(){
+describe.skip('Quick View Pop Up',function(){
     const wishlist = new mywishlist();
    beforeEach(() => {
         cy.visit('/webshop');

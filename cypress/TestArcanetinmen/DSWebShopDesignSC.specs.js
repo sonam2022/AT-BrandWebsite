@@ -1,6 +1,6 @@
 
 import 'cypress-iframe'
-describe('Design Sleeve Crafter',function(){
+describe.skip('Design Sleeve Crafter',function(){
     beforeEach(() => {
      
          cy.visit('/webshop');

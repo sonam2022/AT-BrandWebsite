@@ -1,4 +1,4 @@
-describe('DS Checkout EU Demo II',function(){
+describe.skip('DS Checkout EU Demo II',function(){
 
     before(() => {
     

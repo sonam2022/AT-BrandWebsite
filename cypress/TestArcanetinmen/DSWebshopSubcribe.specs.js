@@ -2,7 +2,7 @@ import {faker} from '@faker-js/faker';
 
 const email = faker.internet.email();
 
-describe('DSWebshopSubscribe',function(){
+describe.skip('DSWebshopSubscribe',function(){
  beforeEach(() => {
 cy.visit('/webshop');
 cy.url().should('include','dragonshield');

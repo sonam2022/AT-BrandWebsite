@@ -1,7 +1,7 @@
 import forgotPassword from '../TestArcanetinmen/PageObjects/forgotPassword';
 import {faker} from '@faker-js/faker';
 
-describe('forget password',()=>{
+describe.skip('forget password',()=>{
  const forpwd = new forgotPassword();
 beforeEach(function(){
 

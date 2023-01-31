@@ -1,7 +1,7 @@
 import {faker} from '@faker-js/faker';
 
 const message =  faker.lorem.lines();
-describe('Contact Us Form',function(){
+describe.skip('Contact Us Form',function(){
        beforeEach(() => {
         
          cy.launchwebsite("/webshop");

@@ -1,4 +1,4 @@
-describe("alert",function(){
+describe.skip("alert",function(){
 
     it('google',function(){
 

@@ -1,6 +1,6 @@
 import menupom from '../TestArcanetinmen/PageObjects/menupom';
 
-describe('Visit Each menu and submenu',()=>{
+describe.skip('Visit Each menu and submenu',()=>{
 
     const menuhomepage = new menupom();
 

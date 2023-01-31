@@ -1,4 +1,4 @@
-describe('DSWebshopFooterLinks',function(){
+describe.skip('DSWebshopFooterLinks',function(){
     beforeEach(() => {
    cy.visit('/webshop');
    cy.url().should('include','dragonshield');

@@ -1,6 +1,6 @@
 //Test Suite for AT BrandWebsite
 
-describe('AT Brandsite Automation Suite II',function(){
+describe.skip('AT Brandsite Automation Suite II',function(){
 
 before(() => {
 

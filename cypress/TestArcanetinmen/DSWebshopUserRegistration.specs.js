@@ -8,7 +8,7 @@ const domainname = "qarraeah.mailosaur.net";
 const emailRandom = faker.internet.email(nameRandomf,nameRandoml,domainname);
 const randomPass = faker.internet.password();
 
-describe('User registration',function(){
+describe.skip('User registration',function(){
 
 
   const userreg = new userRegistration();

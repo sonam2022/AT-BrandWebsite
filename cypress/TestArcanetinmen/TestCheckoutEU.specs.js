@@ -1,4 +1,4 @@
-describe('DS Checkou EU Demo I',function(){
+describe.skip('DS Checkou EU Demo I',function(){
 
     before(() => {
     

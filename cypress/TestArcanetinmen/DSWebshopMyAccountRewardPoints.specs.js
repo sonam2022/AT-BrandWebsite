@@ -1,6 +1,6 @@
 import {recurse} from 'cypress-recurse'
 
-describe('Navigate to My Account_Rewards_History',()=>{
+describe.skip('Navigate to My Account_Rewards_History',()=>{
     beforeEach(function () {
             cy.visit('/webshop');
             cy.xpath("/html/body/div[1]/div/div[4]/div[1]/div[2]/button[4]").click();

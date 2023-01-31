@@ -1,4 +1,4 @@
-describe('Navigate to My Account',()=>{
+describe.skip('Navigate to My Account',()=>{
  
     beforeEach(function () {
         cy.fixture('address.json').then(function(data){

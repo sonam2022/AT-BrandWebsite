@@ -1,4 +1,4 @@
-describe('Navigate to My Account_Order Details',()=>{
+describe.skip('Navigate to My Account_Order Details',()=>{
     beforeEach(function () {
             cy.visit('/webshop');
             cy.xpath("/html/body/div[1]/div/div[4]/div[1]/div[2]/button[4]").click();

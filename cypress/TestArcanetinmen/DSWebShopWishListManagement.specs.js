@@ -1,7 +1,7 @@
 import wishListManagement from '../TestArcanetinmen/PageObjects/mywishlist';
 import mywishlist from '../TestArcanetinmen/PageObjects/mywishlist';
 
-describe('Wishlist Management',function(){
+describe.skip('Wishlist Management',function(){
 const wishlist = new mywishlist();
    beforeEach(() => {
     

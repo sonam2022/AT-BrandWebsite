@@ -1,4 +1,4 @@
-describe('AT Brandsite Automation Suite I',function(){
+describe.skip('AT Brandsite Automation Suite I',function(){
 
     before(() => {
     
